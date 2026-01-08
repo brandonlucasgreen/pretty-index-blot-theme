@@ -1,0 +1,43 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>{{> title}}</title>
+
+<link rel="me" href="https://threads.net/@kidlightbulbs" />
+<link rel="me" href="https://bsky.app/profile/bgreen.lol" />
+<link rel="me" href="https://facebook.com/brandonlucasgreen" />
+<link rel="me" href="https://instagram.com/kidlightbulbs" />
+<link rel="me" href="https://mastodon.social/@bgreen" />
+<link rel="me" href="http://github.com/brandonlucasgreen" />
+<link rel="me" href="mailto:hi@bgreen.lol" />
+<link rel="me" href="mailto:brandonlucasgreen@gmail.com" />
+<link rel="authorization_endpoint" href="https://indieauth.com/auth">
+<link rel="webmention" href="https://webmention.io/username/webmention" />
+<script src="https://static.webring.gg/www/scripts/widget.js"></script>
+<link rel="stylesheet" href="https://static.webring.gg/www/styles/widget/mini.css" />
+
+  <link rel="alternate" type="application/rss+xml" title="{{title}}" href="{{{blogURL}}}{{{feedURL}}}" />
+
+  {{#avatar}}
+  <link rel="icon" href="{{{avatar}}}" type="image/x-icon" />
+  {{/avatar}}
+
+  <link rel="stylesheet" href="{{#cdn}}/style.css{{/cdn}}" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://kit.fontawesome.com/c9a3c33dcc.js" crossorigin="anonymous"></script>
+  <meta name="description" content="{{> description}}" />
+
+  <!-- Meta tags for sharing on social media platforms -->
+  {{#entry}}
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{summary}}">
+{{#thumbnail.large}}
+<meta property="og:image" content="{{{url}}}">
+{{/thumbnail.large}}
+<meta property="og:url" content="{{{absoluteURL}}}">
+<meta name="twitter:card" content="summary_large_image">
+{{/entry}}
+</head>

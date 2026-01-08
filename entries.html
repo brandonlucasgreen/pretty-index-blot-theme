@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+{{> head}}
+
+<body class="navigation-location-{{navigation_location}}">
+  {{> header}}
+  <div class="container">
+    <div class="main">
+      <img src="/_resources/brandon.jpeg" style="margin-left:25px;float:right;height:100px;width:100px;margin-right:15px;">
+      <span>Music maker, product leader, writer & technologist based in central MA, USA. Tinkering with the internet in pursuit of creative independence.<br /><br />
+     <div class="wide">
+
+      </div>
+      
+      <h3>recent writing</h3>
+      {{#entries}}
+		
+      {{#is.index_layout.titles}}
+	    <div style="justify-content:flex-start;"><a href="{{{url}}}">{{title}}</a> ⋅ <span style="color:#aeaeae;font-size:0.875em">{{date}}</span></div>
+      {{/is.index_layout.titles}}
+
+      {{#is.index_layout.title_and_summary}}
+      <p><a href="{{{url}}}">{{title}}</a><span style="display: block;margin:0.5em 0">{{{summary}}}</span>
+        <a class="small date" href="{{{url}}}">{{date}}</a>
+        {{#tags}}
+        <a class="small tag" href="/tagged/{{slug}}">{{name}}</a>
+        {{/tags}}
+      </p>
+      <div class="clear" style="margin-bottom: 2em"></div>
+      {{/is.index_layout.title_and_summary}}
+
+      {{#is.index_layout.post_in_full}}
+      <div class="entry on-index-page" data-url="{{{url}}}">
+      <small>
+
+          <a class="small date" href="{{{url}}}">{{date}} ∞</a>
+        </small>
+        <h1 class="entries"><a href="{{{url}}}">{{title}}</a></h1>
+        {{{body}}}
+        {{#tags}}
+          <a class="small tag" style="font-weight:400;font-style:italic;" href="/tagged/{{slug}}">{{name}}</a>
+        {{/tags}}
+        <div class="clear"></div>
+        
+      </div>
+      <div class="wide">
+        <hr class="minimal">
+        <br>
+      </div>
+      {{/is.index_layout.post_in_full}}
+
+      {{/entries}}
+      
+
+      {{#pagination}}
+      <div class="pagination">
+      	<a href="/archives">Read more &rarr;</a>
+      </div>
+      {{/pagination}}
+      
+      
+
+      {{> footer}}
+    </div>
+  </div>
+</body>
+
+</html>

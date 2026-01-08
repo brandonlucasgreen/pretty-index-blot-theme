@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+{{> head}}
+
+<body class="navigation-location-{{navigation_location}}">
+  {{> header}}
+  <div class="container">
+    <div class="main">
+      <h1>writing</h1>
+      
+       <p style="margin-bottom:0">Subscribe <a href="/feed.rss">via RSS</a> or email for updates:</p>
+<form action="https://buttondown.email/api/emails/embed-subscribe/lightbulbsdispatch" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/lightbulbsdispatch', 'popupwindow')" class="embeddable-buttondown-form">
+  <input class="emailinput" type="email" name="email" id="bd-email" placeholder="hi@youremail.com" /><input type="submit" value="Subscribe" /></form>
+      
+      
+      {{#popular_tags.length}}
+      <h3>by tag</h3>
+      <div class="tags">
+        <div>
+          {{#all_tags}}
+          <a href="/tagged/{{slug}}" {{#active}}style="font-weight:600" {{/active}}
+            title="{{tag}}">{{tag}}</a>{{^last}} ⋅ {{/last}}
+          {{/all_tags}}
+        </div>
+      </div>
+      {{/popular_tags.length}}
+
+      <h3>by date</h3>
+      <div>
+        {{#all_entries}}
+			<a href="{{{url}}}">{{title}}</a> ⋅ <span style="color:#aeaeae;font-size:0.875em">{{date}}</span><br>
+		{{/all_entries}}
+      </div>
+      {{> footer}}
+    </div>
+  </div>
+</body>
+
+</html>
