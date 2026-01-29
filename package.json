@@ -67,7 +67,6 @@
       "writing"
     ]
   },
-  "enabled": true,
   "views": {
     "search.html": {
       "partials": {
@@ -82,16 +81,16 @@
         "description": "All the entries posted on {{{title}}}"
       }
     },
-    "entry.html": {
-      "partials": {
-        "title": "{{{entry.title}}} - {{{title}}}",
-        "description": "{{{entry.summary}}}"
-      }
-    },
     "entries.html": {
       "partials": {
         "title": "{{{title}}}",
         "description": "The latest on {{{title}}}"
+      }
+    },
+    "entry.html": {
+      "partials": {
+        "title": "{{{entry.title}}} - {{{title}}}",
+        "description": "{{{entry.summary}}}"
       }
     },
     "error.html": {
