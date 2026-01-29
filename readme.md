@@ -1,5 +1,5 @@
 # pretty-index
-A heavily modified version of the stock Blog theme for [Blot](https://blot.im). I published this in case anyone wants to make use of the tweaks I've done to it.
+A heavily modified version of the stock Blog theme for [Blot](https://blot.im), which I use on [my own website](https://bgreen.lol). I published this in case anyone wants to make use of the tweaks I've done to it.
 
 ### some features
 - Fully responsive to mobile!
